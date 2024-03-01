@@ -28,5 +28,11 @@ export class ProductService {
   // not be marked
   checkout(order: Order) {
     // TODO Task 3
+    return this.http.post<any>('/api/order', order), {
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      }
+    }
   }
 }
